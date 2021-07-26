@@ -9,10 +9,10 @@
 require 'faker'
 require 'json'
 
-all_managements = JSON.parse(File.read(Rails.root.join('db/json/managements.son')))
-all_areas = JSON.parse(File.read(Rails.root.join('db/json/areas.son')))
-all_faculties = JSON.parse(File.read(Rails.root.join('db/json/faculties.son')))
-all_careers = JSON.parse(File.read(Rails.root.join('db/json/careers.son')))
+all_managements = JSON.parse(File.read(Rails.root.join('db/json/managements.json')))
+all_areas = JSON.parse(File.read(Rails.root.join('db/json/areas.json')))
+all_faculties = JSON.parse(File.read(Rails.root.join('db/json/faculties.json')))
+all_careers = JSON.parse(File.read(Rails.root.join('db/json/careers.json')))
 
 puts "Creating Managements..."
 all_managements.each do |management|
@@ -23,7 +23,7 @@ end
 puts "Managements created!"
 
 puts "Creating Areas..."
-all_area.each do |area|
+all_areas.each do |area|
   Area.create(
     name: area['name'],
     management: Management.find_by(name: area['management'])
@@ -43,7 +43,7 @@ puts "Creating Careers..."
 all_careers.each do |career|
   Career.create(
     name: career['name'],
-    management: Faculty.find_by(name: career['faculty'])
+    faculty: Faculty.find_by(name: career['faculty'])
   )
 end
 puts "Careers created!"
@@ -51,21 +51,21 @@ puts "Careers created!"
 puts "Creating Users..."
 50.times do
   User.create(
-    username:,
-    first_name:,
-    last_name:,
-    phone:,
-    dni:,
-    address:,
-    email:,
-    birthday:,
-    unmsm_code:,
-    cicle:,
-    registered_at:,
-    area:,
-    career:,
-    role:,
-    status:
+    username: Faker::Internet.username,
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    phone: rand(900000000..999999999),
+    dni: Faker::IDNumber.brazilian_id,
+    address: Faker::Address.full_address,
+    email:  Faker::Internet.safe_email,
+    birthday: Faker::Date.birthday,
+    unmsm_code: rand.to_s[2..10].to_i,
+    cicle: rand(1..10),
+    registered_at: Faker::Date.between(from: '2011-07-26', to: Date.today),
+    area: Area.order(Arel.sql('RANDOM()')).first,
+    career: Career.order(Arel.sql('RANDOM()')).first,
+    role: rand(1..3),
+    status: rand(1..3)
   )
 end
 puts "Users created!"
