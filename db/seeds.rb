@@ -60,11 +60,11 @@ puts "Creating Users..."
     email:  Faker::Internet.safe_email,
     birthday: Faker::Date.birthday,
     unmsm_code: rand.to_s[2..10].to_i,
-    cicle: rand(1..10),
+    cicle: rand(1..14),
     registered_at: Faker::Date.between(from: '2011-07-26', to: Date.today),
     area: Area.order(Arel.sql('RANDOM()')).first,
     career: Career.order(Arel.sql('RANDOM()')).first,
-    role: rand(1..3),
+    role: rand(1..2),
     status: rand(1..3)
   )
 end

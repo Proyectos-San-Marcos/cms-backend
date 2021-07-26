@@ -127,13 +127,13 @@ ActiveRecord::Schema.define(version: 2021_07_26_140757) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "username", default: "", null: false
     t.string "first_name"
     t.string "last_name"
     t.integer "phone"
     t.integer "dni"
     t.string "address"
-    t.string "email"
+    t.string "email", default: "", null: false
     t.date "birthday"
     t.integer "unmsm_code"
     t.integer "cicle"
@@ -146,6 +146,8 @@ ActiveRecord::Schema.define(version: 2021_07_26_140757) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["area_id"], name: "index_users_on_area_id"
     t.index ["career_id"], name: "index_users_on_career_id"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
