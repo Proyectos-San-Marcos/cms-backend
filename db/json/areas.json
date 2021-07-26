@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Consultoría y Mejora de Procesos en los proyectos",
+    "management": "Project Management Office"
+  },
+  {
+    "name": "Innovación y Evaluación de Proyectos",
+    "management": "Project Management Office"
+  },
+  {
+    "name": "Capacitaciónes y Desarrollo PMO",
+    "management": "Project Management Office"
+  },
+  {
+    "name": "Comunicación Interna",
+    "management": "Comunicaciones"
+  },
+  {
+    "name": "Relaciones Públicas",
+    "management": "Comunicaciones"
+  },
+  {
+    "name": "Clima y Cultura Organizacional",
+    "management": "Talento Humano"
+  },
+  {
+    "name": "Control Organizacional",
+    "management": "Presidencia"
+  },
+  {
+    "name": "Mejora Continua",
+    "management": "Presidencia"
+  },
+  {
+    "name": "Analíticas y Marketing de Contenidos",
+    "management": "Comunicaciones"
+  },
+  {
+    "name": "Auditoría Financiera",
+    "management": "Finanzas"
+  },
+  {
+    "name": "Gestión Contable",
+    "management": "Finanzas"
+  },
+  {
+    "name": "Logística",
+    "management": "Finanzas"
+  },
+  {
+    "name": "Capacitaciones y Desarrollo TH",
+    "management": "Talento Humano"
+  },
+  {
+    "name": "Reclutamiento, Selección y Planificación",
+    "management": "Talento Humano"
+  },
+  {
+    "name": "Control, Evaluación e Innovación",
+    "management": "Talento Humano"
+  }
+]

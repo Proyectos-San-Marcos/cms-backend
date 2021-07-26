@@ -1,0 +1,266 @@
+[
+  {
+    "name": "Ciencias Biológicas",
+    "faculty": "Ciencias Biológicas"
+  },
+  {
+    "name": "Genética y Biotecnología",
+    "faculty": "Ciencias Biológicas"
+  },
+  {
+    "name": "Microbiología y Parasitología",
+    "faculty": "Ciencias Biológicas"
+  },
+  {
+    "name": "Física",
+    "faculty": "Ciencias Físicas"
+  },
+  {
+    "name": "Ingeniería Mecánica de Fluidos",
+    "faculty": "Ciencias Físicas"
+  },
+  {
+    "name": "Investigación Operativa",
+    "faculty": "Ciencias Matemáticas"
+  },
+  {
+    "name": "Matemática",
+    "faculty": "Ciencias Matemáticas"
+  },
+  {
+    "name": "Computación Científica",
+    "faculty": "Ciencias Matemáticas"
+  },
+  {
+    "name": "Estadística",
+    "faculty": "Ciencias Matemáticas"
+  },
+  {
+    "name": "Química",
+    "faculty": "Química e Ingeniería Química"
+  },
+  {
+    "name": "Ingeniería Química",
+    "faculty": "Química e Ingeniería Química"
+  },
+  {
+    "name": "Ingeniería Agroindustrial",
+    "faculty": "Química e Ingeniería Química"
+  },
+  {
+    "name": "Farmacia y Bioquímica",
+    "faculty": "Farmacia y Bioquímica"
+  },
+  {
+    "name": "Ciencia de los Alimentos",
+    "faculty": "Farmacia y Bioquímica"
+  },
+  {
+    "name": "Toxicología",
+    "faculty": "Farmacia y Bioquímica"
+  },
+  {
+    "name": "Enfermería",
+    "faculty": "Medicina Humana"
+  },
+  {
+    "name": "Medicina Humana",
+    "faculty": "Medicina Humana"
+  },
+  {
+    "name": "Tecnología Médica",
+    "faculty": "Medicina Humana"
+  },
+  {
+    "name": "Obstetricia",
+    "faculty": "Medicina Humana"
+  },
+  {
+    "name": "Nutrición",
+    "faculty": "Medicina Humana"
+  },
+  {
+    "name": "Medicina Veterinaria",
+    "faculty": "Medicina Veterinaria"
+  },
+  {
+    "name": "Odontología",
+    "faculty": "Odontología"
+  },
+  {
+    "name": "Psicología",
+    "faculty": "Psicología"
+  },
+  {
+    "name": "Psicología Organizacional y de la Gestión Humana",
+    "faculty": "Psicología"
+  },
+  {
+    "name": "Administración",
+    "faculty": "Ciencias Administrativas"
+  },
+  {
+    "name": "Administración de Negocios Internacionales",
+    "faculty": "Ciencias Administrativas"
+  },
+  {
+    "name": "Administración de Turismo",
+    "faculty": "Ciencias Administrativas"
+  },
+  {
+    "name": "Auditoria Empresarial y del Sector Público",
+    "faculty": "Ciencias Contables"
+  },
+  {
+    "name": "Contabilidad",
+    "faculty": "Ciencias Contables"
+  },
+  {
+    "name": "Gestión Tributaria",
+    "faculty": "Ciencias Contables"
+  },
+  {
+    "name": "Economía",
+    "faculty": "Ciencias Económicas"
+  },
+  {
+    "name": "Economía Internacional",
+    "faculty": "Ciencias Económicas"
+  },
+  {
+    "name": "Economía Pública",
+    "faculty": "Ciencias Económicas"
+  },
+  {
+    "name": "Educación",
+    "faculty": "Educación"
+  },
+  {
+    "name": "Educación",
+    "faculty": "Educación"
+  },
+  {
+    "name": "Antropología",
+    "faculty": "Ciencias Sociales"
+  },
+  {
+    "name": "Arqueología",
+    "faculty": "Ciencias Sociales"
+  },
+  {
+    "name": "Geografía",
+    "faculty": "Ciencias Sociales"
+  },
+  {
+    "name": "Historia",
+    "faculty": "Ciencias Sociales"
+  },
+  {
+    "name": "Sociología",
+    "faculty": "Ciencias Sociales"
+  },
+  {
+    "name": "Trabajo Social",
+    "faculty": "Ciencias Sociales"
+  },
+  {
+    "name": "Derecho",
+    "faculty": "Derecho y Ciencia Política"
+  },
+  {
+    "name": "Ciencia Política",
+    "faculty": "Derecho y Ciencia Política"
+  },
+  {
+    "name": "Arte",
+    "faculty": "Letras y Ciencias Humanas"
+  },
+  {
+    "name": "Biblitecología y Ciencias de la Información",
+    "faculty": "Letras y Ciencias Humanas"
+  },
+  {
+    "name": "Conservación y Restauración",
+    "faculty": "Letras y Ciencias Humanas"
+  },
+  {
+    "name": "Comunicación Social",
+    "faculty": "Letras y Ciencias Humanas"
+  },
+  {
+    "name": "Filosofía",
+    "faculty": "Letras y Ciencias Humanas"
+  },
+  {
+    "name": "Lingüística",
+    "faculty": "Letras y Ciencias Humanas"
+  },
+  {
+    "name": "Literatura",
+    "faculty": "Letras y Ciencias Humanas"
+  },
+  {
+    "name": "Danza",
+    "faculty": "Letras y Ciencias Humanas"
+  },
+  {
+    "name": "Ingeniería de Sistemas",
+    "faculty": "Ingeniería de Sistemas e Informática"
+  },
+  {
+    "name": "Ingeniería de Software",
+    "faculty": "Ingeniería de Sistemas e Informática"
+  },
+  {
+    "name": "Ingeniería Biomédica",
+    "faculty": "Ingeniería Electrónica y Eléctrica"
+  },
+  {
+    "name": "Ingeniería Electrónica",
+    "faculty": "Ingeniería Electrónica y Eléctrica"
+  },
+  {
+    "name": "Ingeniería Eléctrica",
+    "faculty": "Ingeniería Electrónica y Eléctrica"
+  },
+  {
+    "name": "Ingeniería de Telecomunicaciones",
+    "faculty": "Ingeniería Electrónica y Eléctrica"
+  },
+  {
+    "name": "Ingeniería Geográfica",
+    "faculty": "Ingeniería Geológica, Minera, Metalúrgica y Geográfica"
+  },
+  {
+    "name": "Ingeniería Geológica",
+    "faculty": "Ingeniería Geológica, Minera, Metalúrgica y Geográfica"
+  },
+  {
+    "name": "Ingeniería Civil",
+    "faculty": "Ingeniería Geológica, Minera, Metalúrgica y Geográfica"
+  },
+  {
+    "name": "Ingeniería Metalúrgica",
+    "faculty": "Ingeniería Geológica, Minera, Metalúrgica y Geográfica"
+  },
+  {
+    "name": "Ingeniería de Minas",
+    "faculty": "Ingeniería Geológica, Minera, Metalúrgica y Geográfica"
+  },
+  {
+    "name": "Ingeniería Ambiental",
+    "faculty": "Ingeniería Geológica, Minera, Metalúrgica y Geográfica"
+  },
+  {
+    "name": "Ingeniería Textil y Confecciones",
+    "faculty": "Ingeniería Industrial"
+  },
+  {
+    "name": "Ingeniería Industrial",
+    "faculty": "Ingeniería Industrial"
+  },
+  {
+    "name": "Ingeniería de Seguridad y Salud en el Trabajo",
+    "faculty": "Ingeniería Industrial"
+  }
+]
