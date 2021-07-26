@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_13_234101) do
+ActiveRecord::Schema.define(version: 2021_07_26_140757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,6 +97,8 @@ ActiveRecord::Schema.define(version: 2021_07_13_234101) do
     t.date "finished_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "parent_id"
+    t.index ["parent_id"], name: "index_projects_on_parent_id"
   end
 
   create_table "requests", force: :cascade do |t|
@@ -152,6 +154,7 @@ ActiveRecord::Schema.define(version: 2021_07_13_234101) do
   add_foreign_key "careers", "faculties"
   add_foreign_key "evaluated_users", "evaluations"
   add_foreign_key "evaluated_users", "users"
+  add_foreign_key "projects", "projects", column: "parent_id"
   add_foreign_key "user_projects", "projects"
   add_foreign_key "user_projects", "users"
   add_foreign_key "user_requests", "requests"
