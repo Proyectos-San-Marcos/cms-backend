@@ -1,6 +1,9 @@
 class User < ApplicationRecord
-  belongs_to :area
-  belongs_to :career
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable,
+         :jwt_authenticatable, jwt_revocation_strategy: JwtDenylist
 
   # Validations
   validates :username, :first_name, :last_name, :email, presence: true
@@ -18,6 +21,8 @@ class User < ApplicationRecord
   end
 
   # Associations
+  belongs_to :area
+  belongs_to :career
   has_one_attached :photo
   has_many :user_projects, dependent: :nullify
   has_many :projects, through: :user_projects
