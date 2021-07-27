@@ -230,6 +230,7 @@ DEPENDENCIES
   faker
   graphiql-rails
   graphql
+  jwt
   listen (~> 3.3)
   omniauth-facebook
   omniauth-google-oauth2

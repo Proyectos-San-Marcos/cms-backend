@@ -69,3 +69,31 @@ puts "Creating Users..."
   )
 end
 puts "Users created!"
+
+puts "Creating Projects..."
+10.times do
+  release_date = Faker::Date.between(from: 10.year.ago, to: Date.today)
+
+  Project.create(
+    name: Faker::Movie.title,
+    resume: Faker::Movie.quote,
+    released_at: release_date,
+    finished_at: release_date + 3.months
+  )
+end
+puts "Projects created!"
+
+puts "Creating Project Editions..."
+3.times do
+  release_date = Faker::Date.between(from: 10.year.ago, to: Date.today)
+  parent_project = Project.all.shuffle.first
+
+  Project.create(
+    name: Faker::Movie.title,
+    resume: Faker::Movie.quote,
+    released_at: release_date,
+    finished_at: release_date + 3.months,
+    parent: parent_project
+  )
+end
+puts "Project Editions created!"

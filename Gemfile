@@ -19,6 +19,9 @@ gem 'puma', '~> 5.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# User JSON Web Tokens
+gem 'jwt'
+
 # Use OAuth
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
