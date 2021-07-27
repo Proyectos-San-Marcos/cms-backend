@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(version: 2021_07_26_140757) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "parent_id"
+    t.index ["name"], name: "index_projects_on_name", unique: true
     t.index ["parent_id"], name: "index_projects_on_parent_id"
   end
 
