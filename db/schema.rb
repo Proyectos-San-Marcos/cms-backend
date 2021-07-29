@@ -145,8 +145,8 @@ ActiveRecord::Schema.define(version: 2021_07_27_201239) do
     t.integer "unmsm_code"
     t.integer "cicle"
     t.date "registered_at"
-    t.bigint "area_id", null: false
-    t.bigint "career_id", null: false
+    t.bigint "area_id"
+    t.bigint "career_id"
     t.integer "role"
     t.integer "status"
     t.datetime "created_at", precision: 6, null: false

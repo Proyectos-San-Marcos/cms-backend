@@ -9,13 +9,12 @@ Rails.application.routes.draw do
     mount GraphiQL::Rails::Engine, at: '/graphiql', graphql_path: 'graphql#execute'
   end
 
+  resources :users
   resources :managements
   resources :areas
   resources :faculties
   resources :careers
   resources :projects
-
-  get '/member-data', to: 'members#show'
 
   post '/graphql', to: 'graphql#execute'
 

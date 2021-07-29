@@ -22,8 +22,8 @@ class User < ApplicationRecord
   end
 
   # Associations
-  belongs_to :area
-  belongs_to :career
+  belongs_to :area, optional: true
+  belongs_to :career, optional: true
   has_one_attached :photo
   has_many :user_projects, dependent: :nullify
   has_many :projects, through: :user_projects
