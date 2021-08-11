@@ -25,8 +25,11 @@ gem 'devise'
 # Devise JWT Auth
 gem 'devise-jwt', '~> 0.7.0'
 
-# User JSON Web Tokens
+# Use JSON Web Tokens
 gem 'jwt'
+
+# Use authorization system
+gem 'pundit'
 
 # Use OAuth
 gem 'omniauth-facebook'
