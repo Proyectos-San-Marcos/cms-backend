@@ -20,6 +20,7 @@ class FacultiesController < ApplicationController
   # POST /faculties
   def create
     @faculty = Faculty.new(faculty_params)
+    authorize @faculty
 
     if @faculty.save
       render json: @faculty, status: :created, location: @faculty
@@ -30,6 +31,7 @@ class FacultiesController < ApplicationController
 
   # PATCH/PUT /faculties/1
   def update
+    authorize @faculty
     if @faculty.update(faculty_params)
       render json: @faculty
     else
@@ -39,6 +41,7 @@ class FacultiesController < ApplicationController
 
   # DELETE /faculties/1
   def destroy
+    authorize @faculty
     @faculty.destroy
   end
 

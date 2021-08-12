@@ -16,6 +16,7 @@ class CareersController < ApplicationController
   # POST /careers
   def create
     @career = Career.new(career_params)
+    authorize @career
 
     if @career.save
       render json: @career, status: :created, location: @career
@@ -26,6 +27,7 @@ class CareersController < ApplicationController
 
   # PATCH/PUT /careers/1
   def update
+    authorize @career
     if @career.update(career_params)
       render json: @career
     else
@@ -35,6 +37,7 @@ class CareersController < ApplicationController
 
   # DELETE /careers/1
   def destroy
+    authorize @career
     @career.destroy
   end
 
