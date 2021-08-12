@@ -16,6 +16,7 @@ class AreasController < ApplicationController
   # POST /areas
   def create
     @area = Area.new(area_params)
+    authorize @area
 
     if @area.save
       render json: @area, status: :created, location: @area
@@ -26,6 +27,7 @@ class AreasController < ApplicationController
 
   # PATCH/PUT /areas/1
   def update
+    authorize @area
     if @area.update(area_params)
       render json: @area
     else
@@ -35,6 +37,7 @@ class AreasController < ApplicationController
 
   # DELETE /areas/1
   def destroy
+    authorize @area
     @area.destroy
   end
 

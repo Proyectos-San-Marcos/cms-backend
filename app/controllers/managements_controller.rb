@@ -18,6 +18,7 @@ class ManagementsController < ApplicationController
   # POST /managements
   def create
     @management = Management.new(management_params)
+    authorize @management
 
     if @management.save
       render json: @management, status: :created, location: @management
@@ -28,6 +29,7 @@ class ManagementsController < ApplicationController
 
   # PATCH/PUT /managements/1
   def update
+    authorize @management
     if @management.update(management_params)
       render json: @management
     else
@@ -37,6 +39,7 @@ class ManagementsController < ApplicationController
 
   # DELETE /managements/1
   def destroy
+    authorize @management
     @management.destroy
   end
 
