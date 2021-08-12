@@ -5,15 +5,17 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
 
-    render json: @projects, except: %i[parent_id created_at updated_at], include: {
-      parent: { only: %i[id name] },
+    render json: @projects, except: %i[created_at updated_at], include: {
       editions: { only: %i[id name] }
     }
   end
 
   # GET /projects/1
   def show
-    render json: @project
+    render json: @project, except: %i[parent_id created_at updated_at], include: {
+      parent: { only: %i[id name] },
+      editions: { only: %i[id name] }
+    }
   end
 
   # POST /projects
