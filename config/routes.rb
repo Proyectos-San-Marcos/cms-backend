@@ -19,5 +19,7 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#current'
   post '/graphql', to: 'graphql#execute'
 
+  match '*path', to: 'application#route_not_founded', via: %i[get post]
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

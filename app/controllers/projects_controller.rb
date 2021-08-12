@@ -21,7 +21,6 @@ class ProjectsController < ApplicationController
   # POST /projects
   def create
     @project = Project.new(project_params)
-
     if @project.save
       render json: @project, status: :created, location: @project
     else
@@ -31,6 +30,7 @@ class ProjectsController < ApplicationController
 
   # PATCH/PUT /projects/1
   def update
+    authorize @project
     if @project.update(project_params)
       render json: @project
     else
@@ -40,6 +40,7 @@ class ProjectsController < ApplicationController
 
   # DELETE /projects/1
   def destroy
+    authorize @project
     @project.destroy
   end
 

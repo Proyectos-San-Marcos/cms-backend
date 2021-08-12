@@ -13,7 +13,7 @@ class User < ApplicationRecord
   validates :phone, :dni, :unmsm_code, :cicle, numericality: { only_integer: true }, allow_nil: true
   validates :cicle, inclusion: { in: 1..14, message: 'Should between 0 and 14' }, allow_nil: true
   validate :validate_birthday
-  enum role: { admin: 0, editor: 1, supervisor: 2 }, _prefix: true
+  enum role: { admin: 0, editor: 1, supervisor: 2 }
 
   def validate_birthday
     return if birthday.nil?
