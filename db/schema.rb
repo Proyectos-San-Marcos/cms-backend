@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_26_140757) do
+ActiveRecord::Schema.define(version: 2021_07_27_201239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,12 @@ ActiveRecord::Schema.define(version: 2021_07_26_140757) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "jwt_denylist", force: :cascade do |t|
+    t.string "jti", null: false
+    t.datetime "exp", null: false
+    t.index ["jti"], name: "index_jwt_denylist_on_jti"
+  end
+
   create_table "managements", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -98,6 +104,7 @@ ActiveRecord::Schema.define(version: 2021_07_26_140757) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "parent_id"
+    t.index ["name"], name: "index_projects_on_name", unique: true
     t.index ["parent_id"], name: "index_projects_on_parent_id"
   end
 
@@ -127,25 +134,32 @@ ActiveRecord::Schema.define(version: 2021_07_26_140757) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "username", default: "", null: false
+    t.string "email", default: "", null: false
     t.string "first_name"
     t.string "last_name"
     t.integer "phone"
     t.integer "dni"
     t.string "address"
-    t.string "email"
     t.date "birthday"
     t.integer "unmsm_code"
     t.integer "cicle"
     t.date "registered_at"
-    t.bigint "area_id", null: false
-    t.bigint "career_id", null: false
+    t.bigint "area_id"
+    t.bigint "career_id"
     t.integer "role"
     t.integer "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.index ["area_id"], name: "index_users_on_area_id"
     t.index ["career_id"], name: "index_users_on_career_id"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
