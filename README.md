@@ -11,7 +11,7 @@ Ruby: 3.0.1
       align="center"
       src="https://image.flaticon.com/icons/png/512/733/733547.png"
       alt="Proyectos San Marcos | Facebook"
-      height="30"
+      height="40"
       width="40"
   /></a>
   <a href="https://instagram.com/proyectossm" target="_blank"
