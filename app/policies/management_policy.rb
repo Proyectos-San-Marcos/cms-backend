@@ -14,5 +14,6 @@ class ManagementPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user.admi
+    user.admin?
+  end
 end
